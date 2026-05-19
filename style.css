@@ -18,8 +18,24 @@
   src: url(Fonts/Grille.ttf);
 }
 
+@font-face {
+  font-family: Redacted;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/redacted/v11/Z9XVDmdRShme2O_7aLTZ6Ow.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+#bgVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width: 100%; 
+  height: auto;
+}
+
 body {
-  background: linear-gradient(#000000, #2a2142);
+  background: hsl(0, 0%, 0%);
   background-attachment: fixed; /*edit*/
   font-family: Bagnard;
   font-size: 16px;
@@ -42,34 +58,43 @@ img:hover {
    background-color:  hsla(49, 100%, 85%, 0.63);
 }
 
-.letter {
+.document {
   background: hsl(49, 100%, 85%);
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 100px hsla(49, 100%, 85%, 0.5);
   margin: 26px auto 0;
-  max-width: 550px;
-  min-height: 300px;
+  max-width: 600px;
+  min-height: 10px;
   padding: 24px;
   position: relative;
   width: 80%;
+  color: hsl(0, 0%, 0%);
 }
-.letter:before, .letter:after {
-  content: "";
-  height: 98%;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
+
+.document::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: black;
 }
-.letter:before {
-  background: hsl(49, 70%, 70%);;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  left: -5px;
-  top: 4px;
-  transform: rotate(-2.5deg);
+
+.redactedDocument {
+  background: hsl(47, 6%, 47%);
+  box-shadow: 0 0 10px rgba(0,0,0,1);
+  margin: 26px auto 0;
+  max-width: 500px;
+  min-height: 10px;
+  padding: 24px;
+  position: relative;
+  width: 80%;
+
+  font-family: Bagnard;
+  color: hsl(0, 0%, 0%);
+  
 }
-.letter:after {
-  background: hsl(49, 60%, 55%);
-  box-shadow: 0 0 3px rgba(0,0,0,0.2);
-  right: -3px;
-  top: 1px;
-  transform: rotate(1.4deg);
+
+mark::selection {
+  color: hsl(0, 0%, 100%);
+}
+
+mark {
+  color: hsl(0, 0%, 0%);
+  background-color: black;
 }
