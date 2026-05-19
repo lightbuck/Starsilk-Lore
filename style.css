@@ -19,7 +19,7 @@
 }
 
 body {
-  background: linear-gradient(#3d3a25, #2a2142);
+  background: linear-gradient(#000000, #2a2142);
   background-attachment: fixed; /*edit*/
   font-family: Bagnard;
   font-size: 16px;
@@ -35,6 +35,11 @@ h1 {
 img {
   max-width: 100%;
   height: auto;
+}
+
+img:hover {
+   transform: scale(1.25);
+   background-color:  hsla(49, 100%, 85%, 0.63);
 }
 
 .letter {
