@@ -1,0 +1,70 @@
+@font-face {
+  font-family: LorentzSword;
+  src: url(Fonts/LorentzSword-Regular.otf);
+}
+
+@font-face {
+  font-family: Bagnard;
+  src: url(Fonts/BagnardSans.otf);
+}
+
+@font-face {
+  font-family: GrilleBook;
+  src: url(Fonts/GrilleBook.ttf);
+}
+
+@font-face {
+  font-family: Grille;
+  src: url(Fonts/Grille.ttf);
+}
+
+body {
+  background: linear-gradient(#3d3a25, #2a2142);
+  background-attachment: fixed; /*edit*/
+  font-family: Bagnard;
+  font-size: 16px;
+  padding: 20px;
+}
+
+h1 {
+  font-family: GrilleBook;
+  font-size: 60px;
+  font-weight: 120;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.letter {
+  background: hsl(49, 100%, 85%);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin: 26px auto 0;
+  max-width: 550px;
+  min-height: 300px;
+  padding: 24px;
+  position: relative;
+  width: 80%;
+}
+.letter:before, .letter:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.letter:before {
+  background: hsl(49, 70%, 70%);;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+.letter:after {
+  background: hsl(49, 60%, 55%);
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.4deg);
+}
